@@ -3,6 +3,7 @@ import CreateReviews from "./sections/create-reviews";
 import Hero from "./sections/hero";
 import Reviews from "./sections/reviews";
 import WhyChooseUs from "./sections/why-choose-us";
+import Services from "./sections/services";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <WhyChooseUs />
+      <Services />
       <Reviews />
       <CreateReviews />
     </main>
