@@ -1,17 +1,16 @@
 import { getReviews } from "../reviews-actions/reviews.action";
 import ReviewCard from "../components/review-card";
-import Link from "next/link"; // Necesitas importar Link de Next.js para la navegación
+import Link from "next/link";
+
+export const dynamic = "force-dynamic";
 
 export default async function Reviews() {
   const allReviews = await getReviews();
 
-  // 1 - Filtrar para obtener solo las reseñas con 5 estrellas y limitar a las primeras 6.
   const topReviews = allReviews
     .filter((review) => review.rating === 5)
     .slice(0, 6);
 
-  // Determinar si hay más de 6 reseñas en total (sin importar la puntuación),
-  // para decidir si mostrar el botón "Ver todas las reseñas".
   const hasMoreThanSixReviews = allReviews.length > 6;
 
   return (
@@ -23,7 +22,6 @@ export default async function Reviews() {
       </div>
 
       {topReviews.length === 0 ? (
-        // Mensaje si no hay reseñas de 5 estrellas para mostrar
         <div className="text-center text-white container mx-auto px-4">
           Aún no hay reseñas de 5 estrellas. ¡Sé el primero!
         </div>
@@ -40,7 +38,6 @@ export default async function Reviews() {
             ))}
           </div>
 
-          {/* 2 - Botón condicional para ver todas las reseñas */}
           {hasMoreThanSixReviews && (
             <div className="text-center mt-10">
               <Link
