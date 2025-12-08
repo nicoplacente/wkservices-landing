@@ -1,6 +1,8 @@
 import { getReviews } from "../reviews-actions/reviews.action";
 import AllReviewsCard from "../components/all-reviews-card";
 
+export const dynamic = "force-dynamic";
+
 export default async function AllReviewsPage() {
   const allReviews = await getReviews();
 
