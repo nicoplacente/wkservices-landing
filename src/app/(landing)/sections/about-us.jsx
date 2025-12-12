@@ -54,6 +54,8 @@ export default function AboutUs() {
               autoPlay
               loop
               muted
+              playsinline
+              tabIndex="-1"
               src="/working/video-presentacion.webm"
               className="w-full h-full object-cover"
             ></video>
