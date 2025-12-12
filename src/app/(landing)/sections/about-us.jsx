@@ -21,6 +21,7 @@ export default function AboutUs() {
                     src="/mario.webp"
                     alt="Mariano Wasytak"
                     className="size-14 min-w-14 rounded-full object-cover"
+                    title="Mariano Wasytak"
                   />
                 </div>
                 <div>
@@ -37,6 +38,7 @@ export default function AboutUs() {
                     src="/rayito.webp"
                     alt="Luciano Wasytak"
                     className="size-14 min-w-14 rounded-full object-cover"
+                    title="Luciano Wasytak"
                   />
                 </div>
                 <div>
@@ -54,7 +56,8 @@ export default function AboutUs() {
               autoPlay
               loop
               muted
-              playsinline
+              playsInline
+              webkit-playsinline="true"
               tabIndex="-1"
               src="/working/video-presentacion.webm"
               className="w-full h-full object-cover"
