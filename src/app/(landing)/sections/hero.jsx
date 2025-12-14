@@ -1,10 +1,11 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section
       id="inicio"
       className="relative h-screen flex mt-12 sm:mt-0 items-center justify-center bg-black"
     >
-      {/* Imagen de fondo con overlay */}
       <div className="absolute inset-0 opacity-10">
         <img
           src="/tools-hero.webp"
@@ -28,18 +29,22 @@ export default function Hero() {
           eléctricos. Calidad garantizada por una familia de expertos.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#contacto"
+          <Link
+            href="https://wa.me/5492926497753"
+            rel="noopener noreferrer nofollow"
+            aria-label="Número de WhatsApp de Luciano Wasytak"
+            target="_blank"
             className="px-8 py-4 bg-green-500 text-black font-bold rounded-lg hover:bg-green-400 transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)]"
           >
             Pedir Presupuesto
-          </a>
-          <a
+          </Link>
+          <Link
             href="#nosotros"
+            aria-label="Conocer al Equipo"
             className="px-8 py-4 bg-transparent border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all"
           >
             Conocer al Equipo
-          </a>
+          </Link>
         </div>
       </div>
     </section>
