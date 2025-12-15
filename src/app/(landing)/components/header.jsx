@@ -19,7 +19,7 @@ export default function Header() {
           <span className="text-xl font-bold tracking-tight">Services</span>
         </Link>
 
-        <nav className="hidden md:flex gap-8 font-medium">
+        <nav className="hidden lg:flex gap-8 font-medium">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}

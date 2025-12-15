@@ -10,7 +10,7 @@ export default function NavMobile({ navItems }) {
     <>
       {/* Toggle Button */}
       <button
-        className="md:hidden text-green-500 hover:text-green-400 transition-colors cursor-pointer"
+        className="lg:hidden text-green-500 hover:text-green-400 transition-colors cursor-pointer"
         onClick={() => setOpen(!open)}
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
       >
@@ -19,7 +19,7 @@ export default function NavMobile({ navItems }) {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-black border-t border-gray-800 p-4 flex flex-col gap-4 absolute top-full left-0 w-full">
+        <div className="lg:hidden bg-black border-t border-gray-800 p-4 flex flex-col gap-4 absolute top-full left-0 w-full">
           {navItems.map((item) => (
             <a
               key={item.href}
